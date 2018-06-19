@@ -1,0 +1,15 @@
+try {
+
+            Integer row = jTableAss.getSelectedRow();
+
+            if (row < 0) {
+                JOptionPane.showMessageDialog(this, "Selecione um registro!");
+                return;
+            }
+
+            DefaultTableModel model = (DefaultTableModel) jTableAss.getModel();
+            model.removeRow(row);
+
+        } catch (HeadlessException e) {
+            JOptionPane.showMessageDialog(this, "Erro: " + e.toString());
+        }
